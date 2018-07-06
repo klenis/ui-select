@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.19.8 - 2018-07-06T09:24:13.355Z
+ * Version: 0.19.8 - 2018-07-06T09:28:32.328Z
  * License: MIT
  */
 
@@ -594,7 +594,6 @@ body > .ui-select-bootstrap4.open {
 }
 
 .ui-select-bootstrap4 .ui-select-choices-row>span {
-    cursor: pointer;
     white-space: nowrap;
 }
 
@@ -623,6 +622,10 @@ body > .ui-select-bootstrap4.open {
 
 .ui-select-bootstrap4 .ui-select-dropdown .dropdown-menu {
   display: block;
+}
+
+.ui-select-bootstrap4 .ui-select-dropdown .dropdown-menu .dropdown-item {
+  cursor: pointer;
 }
 
 /* Mark invalid Bootstrap */

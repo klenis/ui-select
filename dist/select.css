@@ -1,7 +1,7 @@
 /*!
  * ui-select
  * http://github.com/angular-ui/ui-select
- * Version: 0.19.8 - 2018-07-06T09:16:50.985Z
+ * Version: 0.19.8 - 2018-07-06T09:24:13.355Z
  * License: MIT
  */
 
@@ -441,6 +441,7 @@ body > .ui-select-bootstrap.open {
 
 .ui-select-bootstrap4 .ui-select-toggle {
   position: relative;
+  min-height: 38px;
 }
 
 .ui-select-bootstrap4 .ui-select-toggle > .caret {

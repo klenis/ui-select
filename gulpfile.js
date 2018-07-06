@@ -20,7 +20,7 @@ var config = {
 };
 
 gulp.task('default', ['build','test']);
-gulp.task('build', ['scripts', 'styles']);
+gulp.task('build', ['scripts', 'styles', 'clean']);
 gulp.task('test', ['build', 'karma']);
 
 gulp.task('watch', ['build','karma-watch'], function() {
@@ -31,7 +31,7 @@ gulp.task('clean', function(cb) {
   del(['dist', 'temp'], cb);
 });
 
-gulp.task('scripts', ['clean'], function() {
+gulp.task('scripts', function() {
 
   var buildTemplates = function () {
     return gulp.src('src/**/*.html')
@@ -67,15 +67,14 @@ gulp.task('scripts', ['clean'], function() {
     }))
     .pipe(gulp.dest('dist'))
     .pipe($.sourcemaps.init())
-    .pipe($.uglify({preserveComments: 'some'}))
+    .pipe($.uglify())
     .pipe($.concat('select.min.js'))
     .pipe($.sourcemaps.write('./'))
     .pipe(gulp.dest('dist'));
 
 });
 
-gulp.task('styles', ['clean'], function() {
-
+gulp.task('styles', function() {
   return gulp.src(['src/common.css'], {base: 'src'})
     .pipe($.sourcemaps.init())
     .pipe($.header(config.banner, {

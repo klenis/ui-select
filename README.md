@@ -16,7 +16,7 @@ AngularJS-native version of [Select2](http://ivaynberg.github.io/select2/) and [
 ## Features
 
 - Search, Select, Multi-select and Tagging
-- Multiple Themes: Bootstrap, Select2 and Selectize
+- Multiple Themes: Bootstrap, Bootstrap 4, Select2 and Selectize
 - Keyboard support
 - No jQuery required (except for old browsers)
 - Small code base: 4.57KB min/gzipped vs 20KB for select2
